@@ -6,11 +6,11 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 00:46:59 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/09 10:59:59 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/09 11:00:33 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#include "PhoneBook.hpp"
 
 Phonebook::Phonebook(){
     this->contactsCount = 0;
