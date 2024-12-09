@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 00:46:59 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/07 01:12:35 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/09 10:59:59 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ std::string truncate(std::string str)
 }
 
 void Phonebook::addContact(){
-    int position = this->contactsCount;
+    int position = this->contactsCount % 8;
     std::string firstName;
     std::string lastName;
     std::string nickname;
