@@ -6,11 +6,11 @@
 #    By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/10 09:04:20 by gude-jes          #+#    #+#              #
-#    Updated: 2024/12/10 09:04:20 by gude-jes         ###   ########.fr        #
+#    Updated: 2024/12/11 08:22:06 by gude-jes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Contact.cpp main.cpp Phonebook.cpp
+SRC = Contact.cpp main.cpp PhoneBook.cpp
 
 NAME = PhoneBook
 

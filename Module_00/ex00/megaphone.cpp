@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 00:45:31 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/07 00:45:32 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/11 09:37:43 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main(int argc, char **argv)
         {
             for (int j = 0; argv[i][j]; j++)
             {
-                std::cout << (char)toupper(argv[i][j]);
+                std::cout << static_cast<char>(std::toupper(argv[i][j]));
             }
         }
         std::cout << std::endl;
