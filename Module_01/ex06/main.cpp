@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 12:45:23 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/12 09:13:40 by gude-jes         ###   ########.fr       */
+/*   Created: 2024/12/12 09:20:35 by gude-jes          #+#    #+#             */
+/*   Updated: 2024/12/12 09:48:08 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "Harl.hpp"
 
-class Harl
+int main(int argc, char **argv)
 {
-	public:
-		Harl();
-		~Harl();
-		void complain(std::string level);
-	private:
-		void debug(void);
-		void info(void);
-		void warning(void);
-		void error(void);
-};
+	Harl harl;
+
+	if(argc == 1)
+	{
+		std::cout << "Usage: ./harl [debug/info/warning/error]" << std::endl;
+		return 1;
+	}
+	else
+		harl.complain(argv[1]);
+	return 0;
+}
