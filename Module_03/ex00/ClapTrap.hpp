@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 09:07:35 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/17 09:11:55 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/17 11:39:07 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class ClapTrap{
 	public:
 		ClapTrap();
 		ClapTrap(std::string name);
+		ClapTrap &operator=(ClapTrap const &other);
 		~ClapTrap();
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);

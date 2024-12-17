@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 09:10:17 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/17 10:25:35 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/17 11:39:28 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,17 @@
 ClapTrap::ClapTrap(){
 	std::cout << "ClapTrap " << this->_name << " is alive!" << std::endl;
 	std::cout << "Constructor called!" << std::endl;
+}
+
+ClapTrap &ClapTrap::operator=(ClapTrap const &other){
+	std::cout << "Assignation operator called!" << std::endl;
+	if(this != &other){
+		this->_name = other._name;
+		this->_hitpoints = other._hitpoints;
+		this->_energyPoints = other._energyPoints;
+		this->_attackDamage = other._attackDamage;
+	}
+	return *this;
 }
 
 ClapTrap::~ClapTrap(){
