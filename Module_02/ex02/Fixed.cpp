@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 09:06:31 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/17 09:06:32 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/18 08:43:52 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,19 +75,27 @@ void Fixed::setRawBits(int const raw) {
 }
 
 Fixed Fixed::operator+(Fixed const &fixed) const {
-	return Fixed(this->toFloat() + fixed.toFloat());
+	Fixed result;
+	result.setRawBits(this->getRawBits() + fixed.getRawBits());
+	return result;
 }
 
 Fixed Fixed::operator-(Fixed const &fixed) const {
-	return Fixed(this->toFloat() - fixed.toFloat());
+	Fixed result;
+	result.setRawBits(this->getRawBits() - fixed.getRawBits());
+	return result;
 }
 
 Fixed Fixed::operator*(Fixed const &fixed) const {
-	return Fixed(this->toFloat() * fixed.toFloat());
+	Fixed result;
+	result.setRawBits((this->getRawBits() * fixed.getRawBits()) >> Fixed::_fractionalBits);
+	return result;
 }
 
 Fixed Fixed::operator/(Fixed const &fixed) const {
-	return Fixed(this->toFloat() / fixed.toFloat());
+	Fixed result;
+	result.setRawBits((this->getRawBits() << Fixed::_fractionalBits) / fixed.getRawBits());
+	return result;
 }
 
 Fixed &Fixed::operator++(void) {

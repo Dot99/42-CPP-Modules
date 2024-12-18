@@ -6,14 +6,14 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 09:10:17 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/17 11:50:30 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/18 10:40:02 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(){
-	std::cout << "ClapTrap " << this->_name << " is alive!" << std::endl;
+	std::cout << "ClapTrap" << this->_name << " is alive!" << std::endl;
 	std::cout << "Constructor called!" << std::endl;
 }
 

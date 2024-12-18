@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 09:10:17 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/18 10:40:06 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/18 12:09:15 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,18 @@
 
 ClapTrap::ClapTrap(){
 	std::cout << "ClapTrap" << this->_name << " is alive!" << std::endl;
-	std::cout << "Constructor called!" << std::endl;
+	std::cout << "ClapTrap Constructor called!" << std::endl;
+	std::cout << std::endl;
+}
+
+ClapTrap::ClapTrap(ClapTrap const &clapTrap){
+	std::cout << "ClapTrap " << this->_name << " is alive!" << std::endl;
+	std::cout << "ClapTrap Copy constructor called!" << std::endl;
+	*this = clapTrap;
 }
 
 ClapTrap &ClapTrap::operator=(ClapTrap const &other){
-	std::cout << "Assignation operator called!" << std::endl;
+	std::cout << "ClapTrap Assignation operator called!" << std::endl;
 	if(this != &other){
 		this->_name = other._name;
 		this->_hitpoints = other._hitpoints;
@@ -30,7 +37,7 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &other){
 
 ClapTrap::~ClapTrap(){
 	std::cout << "ClapTrap " << this->_name << " is dead!" << std::endl;
-	std::cout << "Destructor called!" << std::endl;
+	std::cout << "ClapTrap Destructor called!" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name): _name(name), _hitpoints(10), _energyPoints(10), _attackDamage(0){
