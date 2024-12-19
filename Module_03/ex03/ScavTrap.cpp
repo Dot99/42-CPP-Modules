@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 10:27:26 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/17 12:03:47 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/19 10:46:45 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ ScavTrap::ScavTrap() : ClapTrap(){
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
+	std::cout << "ScavTrap " << name << " is alive!" << std::endl;
 	std::cout << "ScavTrap Name constructor" << std::endl;
 	_hitpoints = 100;
 	_energyPoints = 50;
