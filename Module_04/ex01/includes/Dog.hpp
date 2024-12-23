@@ -6,12 +6,13 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 09:05:55 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/23 11:39:51 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/23 11:39:38 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal
 {
@@ -22,4 +23,6 @@ class Dog : public Animal
 		Dog(const Dog &src);
 		Dog &operator=(const Dog &src);
 		void makeSound() const;
+	private:
+		Brain *_brain;
 };

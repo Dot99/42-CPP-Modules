@@ -6,7 +6,7 @@
 #    By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/19 11:22:17 by gude-jes          #+#    #+#              #
-#    Updated: 2024/12/20 12:02:11 by gude-jes         ###   ########.fr        #
+#    Updated: 2024/12/23 09:40:21 by gude-jes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ INC = -I$(ROOT)/includes
 VPATH = src
 RM = rm -rf
 
-NAME = Animal
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
+NAME = Brain
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
 OBJ_DIR = obj
 OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)

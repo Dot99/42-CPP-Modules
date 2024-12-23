@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 09:05:55 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/23 11:39:51 by gude-jes         ###   ########.fr       */
+/*   Created: 2024/12/20 09:05:31 by gude-jes          #+#    #+#             */
+/*   Updated: 2024/12/23 11:41:25 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "Animal.hpp"
+#include "Brain.hpp"
 
-class Dog : public Animal
+class Cat : public Animal
 {
 	public:
-		Dog();
-		virtual ~Dog();
-		Dog(const std::string &type);
-		Dog(const Dog &src);
-		Dog &operator=(const Dog &src);
+		Cat();
+		virtual ~Cat();
+		Cat(const std::string &type);
+		Cat(const Cat &src);
+		Cat &operator=(const Cat &src);
 		void makeSound() const;
+		Brain *getBrain() const;
+	private:
+		Brain *_brain;
 };

@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 11:23:12 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/23 08:56:13 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/23 11:33:30 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,31 @@ int main()
 
 		delete wronganimal;
 		delete wrongcat;
+	}
+	{
+		std::cout << "----------Fourth Test-----------" << std::endl;
+		std::cout << "----------Animal Brains----------" << std::endl;
+		const int size = 100;
+		Animal* animal[size];
+		for (int i = 0; i < size; i++)
+		{
+			if(i < size / 2)
+			{
+				animal[i] = new Dog();
+			}
+			else
+			{
+				animal[i] = new Cat();
+			}
+		}
+		for (int i = 0; i < size; i++)
+		{
+			animal[i]->makeSound();
+		}
+		for (int i = 0; i < size; i++)
+		{
+			delete animal[i];
+		}
 	}
 	return 0;
 }

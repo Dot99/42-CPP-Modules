@@ -6,11 +6,12 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 09:08:47 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/20 11:58:18 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/23 11:41:09 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
+#include "Brain.hpp"
 
 Dog::Dog() : Animal("Dog")
 {

@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 09:08:45 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/20 11:58:09 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/23 11:40:50 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 Cat::Cat() : Animal("Cat")
 {
 	std::cout << "Cat default constructor called" << std::endl;
+	_brain = new Brain();
 	std::cout << std::endl;
 }
 
 Cat::~Cat()
 {
 	std::cout << "Cat destructor called" << std::endl;
+	delete _brain;
 	std::cout << std::endl;
 }
 
@@ -51,4 +53,8 @@ Cat &Cat::operator=(const Cat &src)
 void Cat::makeSound() const
 {
 	std::cout << "Meow Meow" << std::endl;
+}
+
+Brain *Cat::getBrain() const{
+    return _brain;
 }
