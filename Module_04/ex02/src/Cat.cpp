@@ -6,13 +6,13 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 09:08:45 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/27 09:14:20 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/27 09:46:28 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal("Cat")
+Cat::Cat() : AAnimal("Cat")
 {
 	std::cout << "Cat default constructor called" << std::endl;
 	_brain = new Brain();
@@ -26,13 +26,13 @@ Cat::~Cat()
 	std::cout << std::endl;
 }
 
-Cat::Cat(const std::string &type) : Animal(type)
+Cat::Cat(const std::string &type) : AAnimal(type)
 {
 	std::cout << "Cat parameterized constructor called" << std::endl;
 	std::cout << std::endl;
 }
 
-Cat::Cat(const Cat &src) : Animal::Animal(src)
+Cat::Cat(const Cat &src) : AAnimal::AAnimal(src)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
 	std::cout << std::endl;

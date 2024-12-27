@@ -6,13 +6,13 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 09:35:09 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/27 09:37:06 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/27 09:43:50 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AAnimal.hpp"
 
-AAnimal::AAnimal() : _type("Animal")
+AAnimal::AAnimal() : _type("AAnimal")
 {
 	std::cout << "AAnimal default constructor called" << std::endl;
 	std::cout << std::endl;
@@ -50,9 +50,4 @@ AAnimal::~AAnimal()
 std::string AAnimal::getType() const
 {
 	return (this->_type);
-}
-
-void AAnimal::makeSound() const
-{
-	std::cout << "AAnimal sound" << std::endl;
 }

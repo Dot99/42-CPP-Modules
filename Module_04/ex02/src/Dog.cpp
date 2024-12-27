@@ -6,14 +6,14 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 09:08:47 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/27 09:15:13 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/27 09:46:30 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Brain.hpp"
 
-Dog::Dog() : Animal("Dog")
+Dog::Dog() : AAnimal("Dog")
 {
 	std::cout << "Dog default constructor called" << std::endl;
 	_brain = new Brain();
@@ -27,13 +27,13 @@ Dog::~Dog()
 	std::cout << std::endl;
 }
 
-Dog::Dog(const std::string &type) : Animal(type)
+Dog::Dog(const std::string &type) : AAnimal(type)
 {
 	std::cout << "Dog parameterized constructor called" << std::endl;
 	std::cout << std::endl;
 }
 
-Dog::Dog(const Dog &src) : Animal::Animal(src)
+Dog::Dog(const Dog &src) : AAnimal::AAnimal(src)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
 	std::cout << std::endl;
