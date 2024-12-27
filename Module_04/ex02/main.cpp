@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 11:23:12 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/27 09:28:09 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/12/27 09:37:54 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,12 @@ int main()
 		{
 			delete animal[i];
 		}
+	}
+	{
+		std::cout << "----------Fifth Test-----------" << std::endl;
+		std::cout << "----------AAnimal----------" << std::endl;
+		const AAnimal* animal = new AAnimal();
+		const AAnimal* dog = new Dog();
 	}
 	return 0;
 }
