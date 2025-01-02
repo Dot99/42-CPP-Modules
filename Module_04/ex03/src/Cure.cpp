@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 11:39:18 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/27 11:43:42 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/02 09:17:03 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Cure::~Cure()
 }
 
 
-Cure &Cure::operator=(Cure const & other)
+Cure &Cure::operator=(Cure const &other)
 {
 	std::cout << "Cure assignation operator called" << std::endl;
 	if (this != &other)
@@ -43,7 +43,7 @@ AMateria* Cure::clone() const
 	return (new Cure(*this));
 }
 
-void Cure::use(ICharacter& target)
+void Cure::use(ICharacter &target)
 {
 	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }

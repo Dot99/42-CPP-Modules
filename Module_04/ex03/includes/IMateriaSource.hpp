@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 10:12:04 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/27 10:43:56 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/02 09:13:02 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 class IMateriaSource
 {
+	protected:
+		IMateriaSource();
+		IMateriaSource(IMateriaSource const &src);
+		IMateriaSource &operator=(IMateriaSource const &other);
 	public:
 		virtual ~IMateriaSource() {}
 		virtual void learnMateria(AMateria*) = 0;

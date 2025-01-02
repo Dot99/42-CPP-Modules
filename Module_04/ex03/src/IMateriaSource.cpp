@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*   IMateriaSource.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/27 12:24:07 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/02 10:00:36 by gude-jes         ###   ########.fr       */
+/*   Created: 2025/01/02 08:43:29 by gude-jes          #+#    #+#             */
+/*   Updated: 2025/01/02 08:47:11 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ICharacter.hpp"
+#include "IMateriaSource.hpp"
 
-ICharacter::ICharacter() {
-	std::cout << "ICharacter default constructor called" << std::endl;
+IMateriaSource::IMateriaSource(void)
+{
+	std::cout << "IMateriaSource default constructor called" << std::endl;
 }
 
-ICharacter::ICharacter(ICharacter const &src) {
+IMateriaSource::IMateriaSource(IMateriaSource const &src)
+{
+	std::cout << "IMateriaSource copy constructor called" << std::endl;
 	*this = src;
-	std::cout << "ICharacter copy constructor called" << std::endl;
 }
 
-ICharacter const &ICharacter::operator=(ICharacter const &other) {
+IMateriaSource &IMateriaSource::operator=(IMateriaSource const & other)
+{
 	(void)other;
-	std::cout << "ICharacter assignment operator called" << std::endl;
-	return *this;
+	std::cout << "IMateriaSource assignation operator called" << std::endl;
+	return (*this);
 }
+

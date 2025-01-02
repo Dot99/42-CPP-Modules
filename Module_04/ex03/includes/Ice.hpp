@@ -6,12 +6,12 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 10:07:47 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/27 11:42:49 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/02 09:55:10 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 class Ice : public AMateria
 {
@@ -21,6 +21,6 @@ class Ice : public AMateria
 		Ice(Ice const &src);
 		Ice &operator=(Ice const &src);
 
-		AMateria *clone() const;
+		virtual AMateria *clone() const;
 		void use(ICharacter &target);
 };

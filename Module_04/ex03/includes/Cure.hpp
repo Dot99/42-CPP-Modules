@@ -6,12 +6,12 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 10:08:19 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/12/27 12:32:02 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/02 09:10:21 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 class Cure: public AMateria
 {
