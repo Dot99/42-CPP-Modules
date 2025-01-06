@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 09:05:16 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/06 09:38:10 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/06 10:31:56 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ AForm *Intern::makeForm(std::string const &formName, std::string const &target) 
         }
     }
     std::cout << "Intern cannot create " << formName << std::endl;
-    return (NULL);
+    throw AForm::FormCreationException();
 }

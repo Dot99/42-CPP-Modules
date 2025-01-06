@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 09:17:27 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/03 16:40:10 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/06 10:29:23 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,11 @@ class AForm
 				virtual const char* what() const throw();
 		};
 		class FileNotOpenedException : public std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+		class FormCreationException : public std::exception
 		{
 			public:
 				virtual const char* what() const throw();

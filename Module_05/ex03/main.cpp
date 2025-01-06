@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 09:44:50 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/06 10:23:34 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/06 10:32:29 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,19 @@ int main()
 		std::cout << "---Test 1---" << std::endl;
 		Intern someRandomIntern;
 		AForm *rrf;
+		AForm *random;
 		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 		std::cout << *rrf << std::endl;
+		try
+		{
+			random = someRandomIntern.makeForm("random", "Bender");
+			std::cout << *random << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+		
 		Bureaucrat *b1 = new Bureaucrat("Bureaucrat 1", 150);
 		std::cout << *b1 << std::endl;
 		b1->signForm(*rrf);

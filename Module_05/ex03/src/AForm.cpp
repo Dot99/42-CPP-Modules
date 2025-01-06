@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 09:38:52 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/06 08:42:35 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/06 10:29:48 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,11 @@ const char* AForm::FormNotSignedException::what() const throw()
 const char* AForm::FileNotOpenedException::what() const throw()
 {
 	return ("File not opened");
+}
+
+const char* AForm::FormCreationException::what() const throw()
+{
+	return ("Form doesn't exist");
 }
 
 std::ostream &operator<<(std::ostream &o, AForm const & obj)
