@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/02 17:23:23 by gude-jes          #+#    #+#              #
-#    Updated: 2025/01/03 09:49:20 by gude-jes         ###   ########.fr        #
+#    Created: 2025/01/03 09:15:58 by gude-jes          #+#    #+#              #
+#    Updated: 2025/01/06 08:59:36 by gude-jes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ INC = -I$(ROOT)/includes
 VPATH = src
 RM = rm -rf
 
-NAME = Bureaucrat
-SRC = Bureaucrat.cpp main.cpp
+NAME = Intern
+SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
 
 OBJ_DIR = obj
 OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)

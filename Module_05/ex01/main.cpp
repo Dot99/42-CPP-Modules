@@ -5,42 +5,39 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/02 17:24:27 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/03 09:50:28 by gude-jes         ###   ########.fr       */
+/*   Created: 2025/01/03 09:44:50 by gude-jes          #+#    #+#             */
+/*   Updated: 2025/01/03 11:28:47 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main()
 {
 	{
 		std::cout << "Test 1" << std::endl;
-		Bureaucrat *bureaucrat = new Bureaucrat("gude-jes", 150);
+		Bureaucrat *bureaucrat = new Bureaucrat("Abilio", 150);
 		std::cout << *bureaucrat << std::endl;
-		bureaucrat->incrementGrade();
-		std::cout << *bureaucrat << std::endl;
+		Form *form = new Form();
+		std::cout << *form << std::endl;
+		form->beSigned(*bureaucrat);
+		std::cout << *form << std::endl;
+		delete form;
 		delete bureaucrat;
 		std::cout << std::endl;
 	}
 	{
 		std::cout << "Test 2" << std::endl;
-		Bureaucrat *bureaucrat = new Bureaucrat("Abilio", 1);
-		std::cout << *bureaucrat << std::endl;
-		bureaucrat->decrementGrade();
-		std::cout << *bureaucrat << std::endl;
-		delete bureaucrat;
-		std::cout << std::endl;
-	}
-	{
-		std::cout << "Test 3" << std::endl;
-		Bureaucrat *bureaucrat1 = new Bureaucrat("Emilio", 150);
-		Bureaucrat *bureaucrat2 = new Bureaucrat("Alberto", 1);
-		std::cout << *bureaucrat1 << std::endl;
-		std::cout << *bureaucrat2 << std::endl;
+		Bureaucrat *b1 = new Bureaucrat("Abilio", 150);
+		Bureaucrat *b2 = new Bureaucrat("Emilio", 1);
+		std::cout << *b1 << std::endl;
+		std::cout << *b2 << std::endl;
+		Form *form = new Form("Form", 1, 1);
+		std::cout << *form << std::endl;
 		try
 		{
-			bureaucrat1->decrementGrade();
+			form->beSigned(*b1);
 		}
 		catch(const std::exception& e)
 		{
@@ -48,15 +45,16 @@ int main()
 		}
 		try
 		{
-			bureaucrat2->incrementGrade();	
+			form->beSigned(*b2);
 		}
 		catch(const std::exception& e)
 		{
 			std::cout << e.what() << std::endl;
 		}
-		delete bureaucrat1;
-		delete bureaucrat2;
-		std::cout << std::endl;
+		
+		std::cout << *form << std::endl;
+		delete form;
+		delete b1;
+		delete b2;
 	}
-	return (0);
 }
