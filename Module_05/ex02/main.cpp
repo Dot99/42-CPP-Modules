@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 09:44:50 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/06 08:54:41 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/06 11:45:56 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int main()
 		bureaucrat->executeForm(*presidential);
 		delete bureaucrat;
 		delete shrubbery;
+		delete robotomy;
+		delete presidential;
 		std::cout << std::endl;
 	}
 	{
