@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 10:52:17 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/06 16:03:51 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/07 09:04:14 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,16 +50,4 @@ class Scalar
 		Scalar(const Scalar &src);
 		~Scalar();
 		Scalar &operator=(const Scalar &src);
-		
-		class NonDisplayable : public std::exception
-		{
-		public:
-			virtual const char *what() const throw();
-		};
-		class Impossible : public std::exception
-		{
-			public:
-				virtual const char *what() const throw();
-		};
-
 };
