@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:09:34 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/07 12:28:40 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/08 09:14:14 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ struct Data
 	std::string s1;
 	std::string s2;
 	int n;
+
+	Data() : s1(""), s2(""), n(0) {}
+	Data(std::string s1, std::string s2, int n) : s1(s1), s2(s2), n(n) {}
 };
 
 class Serializer

@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:09:31 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/07 12:27:37 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/08 09:14:26 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ uintptr_t Serializer::serialize(Data *data)
 
 Data *Serializer::deserialize(uintptr_t raw)
 {
-	Data *data = new Data;
+	Data *data = new Data();
 	char *raw_char = reinterpret_cast<char *>(raw);
 
 	data->s1 = raw_char;
