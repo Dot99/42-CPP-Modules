@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 09:26:42 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/08 09:33:28 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/08 17:27:46 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,24 @@
 
 Base *generate(void)
 {
-	srand(time(NULL));
+	srand(static_cast<unsigned>(time(NULL)));
 	int i = rand() % 3;
 
-	if (i == 0)
-		return new A();
-	else if (i == 1)
-		return new B();
-	else
-		return new C();
+	switch(i)
+	{
+		case 0:
+			return new A();
+			break;
+		case 1:
+			return new B();
+			break;
+		case 2:
+			return new C();
+			break;
+		default:
+			std::cout << "Error on generate" << std::endl;
+			return NULL;
+	}
 }
 
 void identify_from_pointer(Base *p)
@@ -46,8 +55,9 @@ void identify_from_reference(Base &p)
 		(void)a;
 		std::cout << "A" << std::endl;
 	}
-	catch (std::bad_cast &bc)
+	catch (const std::exception &e)
 	{
+		std::cout << "Error on A" << std::endl;
 	}
 	try
 	{
@@ -55,8 +65,9 @@ void identify_from_reference(Base &p)
 		(void)b;
 		std::cout << "B" << std::endl;
 	}
-	catch (std::bad_cast &bc)
+	catch (const std::exception &e)
 	{
+		std::cout << "Error on B" << std::endl;
 	}
 	try
 	{
@@ -64,8 +75,9 @@ void identify_from_reference(Base &p)
 		(void)c;
 		std::cout << "C" << std::endl;
 	}
-	catch (std::bad_cast &bc)
+	catch (const std::exception &e)
 	{
+		std::cout << "Error on C" << std::endl;
 	}
 }
 
