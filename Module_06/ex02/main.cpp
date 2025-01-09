@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 09:26:42 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/08 17:27:46 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/09 08:50:43 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ Base *generate(void)
 
 void identify_from_pointer(Base *p)
 {
+	std::cout << "Pointer: ";
 	if (dynamic_cast<A *>(p))
 		std::cout << "A" << std::endl;
 	else if (dynamic_cast<B *>(p))

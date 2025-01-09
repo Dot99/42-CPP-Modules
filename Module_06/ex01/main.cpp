@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:09:11 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/08 09:17:07 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/09 09:14:14 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void testSerialization(const std::string& s1, const std::string& s2, int n)
     std::cout << "Deserialized Data: " << std::endl;
     std::cout << "s1: " << deserializedData->s1 << ", n: " << deserializedData->n << ", s2: " << deserializedData->s2 << std::endl;
 
+	std::cout << "raw: " << raw << std::endl;
     delete deserializedData;
     delete data;
     delete[] reinterpret_cast<char *>(raw);
