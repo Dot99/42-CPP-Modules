@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 09:29:43 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/21 09:55:18 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/22 09:15:04 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,13 +77,19 @@ void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterato
 	_v.insert(_v.end(), begin, end);
 }
 
-void Span::addNumbers(int *begin, int *end)
+void Span::addRandomNumbers(unsigned int range)
 {
-	for(int *it = begin; it != end; ++it)
+	srand(time(NULL));
+	for (size_t i = 0; i < range; i++)
 	{
-		if (_v.size() >= _N)
-			throw FullSpanException();
-		addNumber(*it);
+		try
+		{
+			addNumber(rand());
+		}
+		catch (const std::exception &e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
 	}
 }
 

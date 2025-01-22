@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 09:29:59 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/21 09:47:10 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/22 09:15:19 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Span
 		int		shortestSpan();
 		int		longestSpan();
 		void	addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
-		void	addNumbers(int *begin, int *end);
+		void	addRandomNumbers(unsigned int range);
 		class FullSpanException : public std::exception
 		{
 			virtual const char* what() const throw();
