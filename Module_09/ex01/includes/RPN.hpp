@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/22 12:45:53 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/24 11:07:59 by gude-jes         ###   ########.fr       */
+/*   Created: 2025/01/24 11:51:36 by gude-jes          #+#    #+#             */
+/*   Updated: 2025/01/24 12:23:12 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BitcoinExchange.hpp"
+#pragma once
+#include <iostream>
+#include <string>
+#include <stack>
 
-int main(int argc, char **argv)
+class RPN
 {
-	if(argc != 2)
-	{
-		std::cout << "Error: could not open file." << std::endl;
-		return(1);
-	}
-	else
-	{
-		BitcoinExchange exchange;
-		try
-		{
-			exchange.loadExchangeRates("data.csv", argv[1]);
-		}
-		catch(const std::exception &e)
-		{
-			std::cout << e.what() << std::endl;
-			return (1);
-		}
-		//exchange.printExchangeRates();
-		return (0);
-	}
-}
+	private:
+		std::stack<int> _stack;
+		std::string _rpn;
+		void _loadRPN(std::string rpn);
+		void _parseRPN();
+		void _printOutput();
+	public:
+		RPN();
+		RPN(RPN const & other);
+		RPN & operator=(RPN const & other);
+		~RPN();
+};
