@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 12:01:53 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/22 12:32:32 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/01/27 08:44:06 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ int main()
 		MutantStack<int>::iterator it = mstack.begin();
 		MutantStack<int>::iterator ite = mstack.end();
 
-		// ++it;
-		// --it;
 		std::cout << "Size: " << mstack.size() << std::endl;
 		int i = 0;
 		while (it != ite)

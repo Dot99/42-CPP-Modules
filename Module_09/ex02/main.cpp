@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RPN.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/24 11:51:36 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/27 11:27:26 by gude-jes         ###   ########.fr       */
+/*   Created: 2025/01/27 11:46:50 by gude-jes          #+#    #+#             */
+/*   Updated: 2025/01/27 12:00:46 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <iostream>
-#include <string>
-#include <string>
-#include <stack>
-#include <sstream>
+#include "PmergeMe.hpp"
 
-class RPN
+int main(int argc, char **argv)
 {
-	private:
-		std::stack<int> _stack;
-		std::string _rpn;
-		void _parseRPN();
-		void _printOutput();
-	public:
-		RPN();
-		RPN(RPN const & other);
-		RPN & operator=(RPN const & other);
-		~RPN();
-		void loadRPN(std::string rpn);
-};
+	if (argc == 1)
+	{
+		std::cerr << "Usage: ./PmergeMe [file]" << std::endl;
+		return 1;
+	}
+	else
+	{
+		PmergeMe pmergeMe;
+		pmergeMe.run(argc, argv);
+	}
+	return 0;
+}
