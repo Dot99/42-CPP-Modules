@@ -6,7 +6,7 @@
 #    By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/22 12:45:56 by gude-jes          #+#    #+#              #
-#    Updated: 2025/01/27 11:46:35 by gude-jes         ###   ########.fr        #
+#    Updated: 2025/01/29 09:28:31 by gude-jes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ INC = -I$(ROOT)/includes
 VPATH = src
 RM = rm -rf
 
-NAME = PmergeM
-SRC = main.cpp PmergeM.cpp
+NAME = PmergeMe
+SRC = main.cpp PmergeMe.cpp
 
 OBJ_DIR = obj
 OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
