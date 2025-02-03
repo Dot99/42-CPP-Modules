@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 12:46:45 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/24 12:20:07 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/02/03 08:57:54 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,7 +159,7 @@ void BitcoinExchange::fileHandling(const std::string &inputFile)
 				if(it != _bitcoinValues.end())
 				{
 					result = value * it->second;
-					std::cout << date << "=>>" << value << "=" << result << std::endl;
+					std::cout << date << " =>> " << value << "=" << result << std::endl;
 				}
 				else
 				{

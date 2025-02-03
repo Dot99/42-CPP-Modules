@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 11:51:34 by gude-jes          #+#    #+#             */
-/*   Updated: 2025/01/27 11:56:16 by gude-jes         ###   ########.fr       */
+/*   Updated: 2025/02/03 09:29:43 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ RPN::~RPN()
 
 void RPN::_parseRPN()
 {
-	 //Run the string and check if there is more than 10 numbers
 	 int numberCount = 0;
 	 std::istringstream iss(_rpn);
 	 std::string token;
@@ -68,6 +67,7 @@ void RPN::_printOutput()
 	std::string token;
 	while(iss >> token)
 	{
+		//std::cout << "Token: " << token << std::endl;
 		if(std::isdigit(token[0]) || (token[0] == '-' && std::isdigit(token[1])) || (token[0] == '+' && std::isdigit(token[1])))
 		{
 			int num;
@@ -82,24 +82,26 @@ void RPN::_printOutput()
 				std::cout << "Error: not enough operands" << std::endl;
 				return;
 			}
+			//std::cout << "a: " << _stack.top() << std::endl;
 			int a = _stack.top();
 			_stack.pop();
+			//std::cout << "b: " << _stack.top() << std::endl;
 			int b = _stack.top();
 			_stack.pop();
 			if(token == "+")
 				_stack.push(a + b);
 			else if(token == "-")
-				_stack.push(a - b);
+				_stack.push(b - a);
 			else if(token == "*")
 				_stack.push(a * b);
 			else if(token == "/")
 			{
-				if(b == 0)
+				if(a == 0)
 				{
 					std::cout << "Error: division by zero" << std::endl;
 					return;
 				}
-				_stack.push(a / b);
+				_stack.push(b / a);
 			}
 		}
 		else
